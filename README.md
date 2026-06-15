@@ -2,7 +2,7 @@
 
 Reference implementation for the IEEE paper **"Predictive Analysis of Walmart Data for
 Sales Forecasting Using Hybrid Machine Learning Model"**
-(K. S. Sarabu, Arul Jothi S, Harismitha C, Reshmi Saravanan).
+(Sarabu Khaja Sahitya).
 
 The project compares six forecasting approaches on the public Walmart store-sales dataset
 and proposes a two-stage **ARIMA-RF hybrid** that combines ARIMA's linear time-series
