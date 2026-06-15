@@ -1,0 +1,24 @@
+# Data — keep the repo light; users download the CSVs themselves
+data/*.csv
+data/*.zip
+
+# Generated outputs
+results/metrics.csv
+results/figures/*.png
+results/tableau/*.csv
+results/run_log.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
