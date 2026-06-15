@@ -50,6 +50,14 @@ so the comparison is apples-to-apples. Values are on the min-max scaled target.
 | **Prophet-RF**  | **0.003139** | **0.056023** | **0.045136** | 8.21 |
 | **ARIMA-RF**    | **0.003647** | **0.060387** | **0.045760** | **8.01** |
 
+### Figures
+
+| Model comparison (MSE) | ARIMA-RF forecast |
+|---|---|
+| ![MSE by model](assets/mse_vs_model.png) | ![ARIMA-RF actual vs predicted](assets/arima_rf_actual_vs_predicted.png) |
+
+*Full set (RMSE/MAE charts too) is regenerated into `results/figures/` on every run.*
+
 **Takeaway (consistent with the paper):** the two **hybrid** models give the lowest error.
 Hybridizing more than halves ARIMA's MSE (0.00683 → 0.00365) and improves on plain Prophet
 too — confirming the paper's central claim that combining a statistical time-series model
