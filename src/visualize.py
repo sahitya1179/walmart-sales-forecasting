@@ -1,4 +1,4 @@
-"""Plots and Tableau-ready exports for the model comparison."""
+"""Plots for the model comparison."""
 from __future__ import annotations
 
 import matplotlib
@@ -45,11 +45,3 @@ def plot_actual_vs_predicted(index, y_true, y_pred,
     plt.tight_layout()
     fig.savefig(config.FIGURES_DIR / fname, dpi=150)
     plt.close(fig)
-
-
-def export_for_tableau(metrics: pd.DataFrame, index, y_true, y_pred) -> None:
-    """Write tidy CSVs that drop straight into the Tableau workbook."""
-    metrics.to_csv(config.TABLEAU_DIR / "model_metrics.csv", index=False)
-    pd.DataFrame(
-        {"Week": pd.to_datetime(index), "Actual": y_true, "Predicted": y_pred}
-    ).to_csv(config.TABLEAU_DIR / "actual_vs_predicted.csv", index=False)

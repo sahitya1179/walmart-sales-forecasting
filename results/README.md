@@ -9,6 +9,3 @@ git-ignored — run the pipeline to (re)create them.
 - `figures/`
   - `mse_vs_model.png`, `rmse_vs_model.png`, `mae_vs_model.png` — Fig. 6/7/8
   - `arima_rf_actual_vs_predicted.png` — Fig. 5
-- `tableau/`
-  - `model_metrics.csv`, `actual_vs_predicted.csv` — tidy inputs for the
-    Tableau dashboards (see `../tableau/README.md`).

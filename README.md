@@ -92,7 +92,6 @@ Outputs land in `results/`:
 
 - `metrics.csv` — the model-comparison table
 - `figures/` — MSE/RMSE/MAE bar charts and the ARIMA-RF actual-vs-predicted plot
-- `tableau/model_metrics.csv`, `tableau/actual_vs_predicted.csv` — tidy exports for Tableau
 
 ---
 
@@ -138,11 +137,10 @@ walmart-sales-forecasting/
 │   ├── config.py             # paths, seed, hyperparameters
 │   ├── preprocessing.py      # cleaning + feature engineering + weekly series
 │   ├── evaluate.py           # MSE / RMSE / MAE / MAPE
-│   ├── visualize.py          # charts + Tableau exports
+│   ├── visualize.py          # comparison charts
 │   ├── main.py               # runs the full model comparison
 │   └── models/               # one module per model + the two hybrids
-├── results/                  # metrics + figures + tableau exports (generated)
-└── tableau/README.md         # dashboard build guide
+└── results/                  # metrics + figures (generated)
 ```
 
 ## Citation

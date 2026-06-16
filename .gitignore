@@ -5,7 +5,6 @@ data/*.zip
 # Generated outputs
 results/metrics.csv
 results/figures/*.png
-results/tableau/*.csv
 results/run_log.txt
 
 # Python

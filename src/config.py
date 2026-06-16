@@ -37,14 +37,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "results"
 FIGURES_DIR = RESULTS_DIR / "figures"
-TABLEAU_DIR = RESULTS_DIR / "tableau"
 
 STORES_CSV = DATA_DIR / "stores.csv"
 TRAIN_CSV = DATA_DIR / "train.csv"
 TEST_CSV = DATA_DIR / "test.csv"
 FEATURES_CSV = DATA_DIR / "features.csv"
 
-for _d in (RESULTS_DIR, FIGURES_DIR, TABLEAU_DIR):
+for _d in (RESULTS_DIR, FIGURES_DIR):
     _d.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------

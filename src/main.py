@@ -5,8 +5,7 @@ Run with::
     python -m src.main
 
 Loads + preprocesses the Walmart data, trains every model, evaluates them on a
-common test horizon, writes ``results/metrics.csv``, the comparison figures and
-the Tableau export CSVs.
+common test horizon, writes ``results/metrics.csv`` and the comparison figures.
 """
 from __future__ import annotations
 
@@ -33,7 +32,7 @@ from .preprocessing import (
     remove_outliers,
     train_test_split_series,
 )
-from .visualize import export_for_tableau, plot_actual_vs_predicted, plot_metric_bars
+from .visualize import plot_actual_vs_predicted, plot_metric_bars
 
 
 def run() -> pd.DataFrame:
@@ -90,13 +89,11 @@ def run() -> pd.DataFrame:
     print(metrics.to_string(index=False))
     print(f"\nSaved metrics -> {metrics_path}")
 
-    # --- figures + tableau exports -----------------------------------------
+    # --- figures ------------------------------------------------------------
     plot_metric_bars(metrics)
     if hybrid_pred is not None:
         plot_actual_vs_predicted(test_s.index, test_s.values, hybrid_pred)
-        export_for_tableau(metrics, test_s.index, test_s.values, hybrid_pred)
     print(f"Saved figures -> {config.FIGURES_DIR}")
-    print(f"Saved Tableau exports -> {config.TABLEAU_DIR}")
 
     return metrics
 
